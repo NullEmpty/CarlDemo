@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="600px"
+        android:layout_height="600px"
+        android:background="@drawable/circle" >
+
+        <com.example.carldemo.circledial.CircleView
+            android:id="@+id/circle_view"
+            android:layout_width="548px"
+            android:layout_height="548px"
+            android:layout_gravity="center" />
+
+        <com.example.carldemo.circledial.WheelMenu
+            android:id="@+id/wheelmenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="296px"
+            android:layout_height="296px"
+            android:layout_gravity="center"
+            android:background="@drawable/circle" />
+
+        <TextView
+            android:id="@+id/txv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</merge><!-- From: file:/D:/workspace/CarlDemo/app/src/main/res/layout/layout_dial_view.xml -->

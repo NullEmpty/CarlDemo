@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100px"
+    android:layout_height="100px"
+    android:background="#00ff00" >
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="视频"
+        android:textSize="20px"
+        android:textColor="@color/item_circle_textcolor" />
+
+</RelativeLayout><!-- From: file:/D:/workspace/CarlDemo/app/src/main/res/layout/item_circle_layout.xml -->

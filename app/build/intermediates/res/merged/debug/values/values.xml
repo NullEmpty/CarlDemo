@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/workspace/CarlDemo/app/src/main/res/values/attr.xml -->
+    <eat-comment/>
+    <attr format="reference" name="bg"/>
+    <attr format="dimension" name="circleWidth"/>
+    <attr format="integer" name="dotCount"/>
+    <attr format="color" name="firstColor"/>
+    <attr format="color" name="secondColor"/>
+    <attr format="integer|dimension" name="splitSize"/>
+    <attr format="integer|dimension" name="textSize"/>
+    <!-- From: file:/D:/workspace/CarlDemo/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="blue_text">#00ff00</color>
+    <color name="half_trans">#55000000</color>
+    <color name="vol_first">#737373</color>
+    <color name="vol_second">#00e2ef</color>
+    <color name="white">#ffffff</color>
+    <declare-styleable name="RoyoleVolumControlBar"><attr name="firstColor"/><attr name="secondColor"/><attr name="circleWidth"/><attr name="dotCount"/><attr name="splitSize"/><attr name="bg"/><attr name="textSize"/></declare-styleable>
+    <!-- From: file:/D:/workspace/CarlDemo/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">CarlDemo</string>
+    <string name="title_audioplayer">audioplayer</string>
+    <string name="title_bmpmanager">bmpmanager</string>
+    <string name="title_circledial">circledial</string>
+    <string name="title_dial">dial</string>
+    <string name="title_pickerview">pickerview</string>
+    <string name="title_test">test</string>
+    <string name="title_view">view</string>
+    <!-- From: file:/D:/workspace/CarlDemo/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

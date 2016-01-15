@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:royole="http://schemas.android.com/apk/res/com.example.carldemo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/vol_circle_bg">
+
+        <com.example.carldemo.view.RoyoleVolumControlBar
+            android:id="@+id/volumecontrol"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/sound_icon"
+            royole:bg="@drawable/vol_icon"
+            royole:circleWidth="20dp"
+            royole:dotCount="50"
+            royole:firstColor="@color/vol_first"
+            royole:secondColor="@color/vol_second"
+            royole:splitSize="1dp"
+            royole:textSize="30sp" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/workspace/CarlDemo/app/src/main/res/layout/layout_view_activity.xml -->

@@ -1,0 +1,205 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:1:1-163:12
+	xmlns:android
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:1:11-69
+	package
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:2:5-35
+		INJECTED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:4:5-30
+	android:versionCode
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:6:5-8:41
+	android:targetSdkVersion
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:8:9-38
+		INJECTED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:7:9-35
+		INJECTED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:10:22-77
+uses-permission#android.permission.INTERNET
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:11:22-64
+uses-permission#android.permission.CAMERA
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:12:5-64
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:12:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:13:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:14:5-70
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:14:22-68
+application
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:16:5-161:19
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:20:9-41
+	android:debuggable
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:18:9-34
+	android:allowBackup
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:17:9-35
+	android:icon
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:19:9-45
+	android:theme
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:21:9-40
+activity#com.example.carldemo.MainActivty
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:22:9-32:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:26:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:25:13-45
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:24:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:23:13-60
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:27:13-31:29
+action#android.intent.action.MAIN
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:30:27-74
+activity#com.example.carldemo.audioplayer.AudioListActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:33:9-43:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:37:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:36:13-54
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:35:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:34:13-78
+intent-filter#android.intent.action.MAIN+carl.intent.category.SAMPLE_CODE
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:38:13-42:29
+category#carl.intent.category.SAMPLE_CODE
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:41:17-77
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:41:27-74
+activity#com.example.carldemo.audioplayer.AudioDetailActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:44:9-49:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:48:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:47:13-54
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:46:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:45:13-80
+activity#com.example.carldemo.pickerview.PickerViewActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:50:9-60:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:54:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:53:13-53
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:52:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:51:13-78
+activity#com.example.carldemo.circledial.CircleActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:61:9-71:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:65:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:64:13-53
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:63:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:62:13-74
+activity#com.example.carldemo.circledial.DialActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:72:9-82:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:76:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:75:13-41
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:74:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:73:13-72
+activity#com.example.carldemo.bitmapmanager.BitmapManagerTestActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:83:9-93:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:87:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:86:13-54
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:85:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:84:13-88
+activity#com.example.carldemo.view.TestViewActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:94:9-104:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:98:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:97:13-45
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:96:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:95:13-70
+activity#com.example.carldemo.TestActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:105:9-115:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:109:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:108:13-33
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:107:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:106:13-61
+activity#com.example.carldemo.opengl.OpenglTest1
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:116:9-126:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:120:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:119:13-40
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:118:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:117:13-67
+activity#com.example.carldemo.opengl.OpenGlTest2
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:127:9-137:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:131:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:130:13-40
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:129:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:128:13-67
+activity#com.example.carldemo.opengl.AirHockeyActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:138:9-148:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:142:13-49
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:141:13-38
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:140:13-79
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:139:13-73
+activity#com.example.carldemo.camera.CameraActivity
+ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:149:9-160:20
+	android:screenOrientation
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:154:13-50
+	android:label
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:152:13-35
+	android:configChanges
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:151:13-79
+	android:theme
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:153:13-77
+	android:name
+		ADDED from D:\workspace\CarlDemo\app\src\main\AndroidManifest.xml:150:13-70
