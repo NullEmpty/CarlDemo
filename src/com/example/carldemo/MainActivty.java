@@ -7,12 +7,17 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
@@ -44,7 +49,7 @@ public class MainActivty extends Activity {
 	private void initView(){
 		GridView gridView = (GridView) findViewById(R.id.gridview);
 		mAdapter = new MainGridAdapter(this);
-		mAdapter.setList(getContentList());
+		mAdapter.setList(getContentList2());
 		gridView.setAdapter(mAdapter);
 		gridView.setOnItemClickListener(getItemClickListener());
 	}
@@ -56,6 +61,7 @@ public class MainActivty extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				// TODO Auto-generated method stub
+				Log.e("TT", "onClick:" + arg1);
 				if (mAdapter == null) {
 					return;
 				}
@@ -63,113 +69,26 @@ public class MainActivty extends Activity {
 				if (item == null) {
 					return;
 				}
-				OnClickListener clickListener = item.getClickListener();
-				if (clickListener != null) {
-					clickListener.onClick(arg1);
-				}
+				Intent intent = new Intent();
+				intent.setClassName(mContext, item.getActivityName());
+				mContext.startActivity(intent);
 			}
 		};
 	}
 	
-	private List<MainItem> getContentList() {
+	private List<MainItem> getContentList2() {
 		List<MainItem> list = new ArrayList<MainItem>();
-		MainItem itemAudioPlayer = new MainItem();
-		itemAudioPlayer.setTitleId(R.string.title_audioplayer);
-		itemAudioPlayer.setOnClickListener(new OnClickListener() {
+		PackageManager pm = getPackageManager();
+		Intent intent = new Intent(Intent.ACTION_MAIN, null);
+		intent.addCategory("carl.intent.category.SAMPLE_CODE");
+		List<ResolveInfo> infoList = pm.queryIntentActivities(intent, 0);
+		for (ResolveInfo info : infoList) {
+			MainItem item = new MainItem();
+			item.setTitleStr(info.loadLabel(pm).toString());
+			item.setActivityName(info.activityInfo.name);
 			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(mContext, AudioListActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-			}
-		});
-		list.add(itemAudioPlayer);
-		
-		MainItem itemPicker = new MainItem();
-		itemPicker.setTitleId(R.string.title_pickerview);
-		itemPicker.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(mContext, PickerViewActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-			}
-		});
-		list.add(itemPicker);
-		
-		MainItem itemCircleDial = new MainItem();
-		itemCircleDial.setTitleId(R.string.title_circledial);
-		itemCircleDial.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(mContext, CircleActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-			}
-		});
-		list.add(itemCircleDial);
-		
-		MainItem itemDial = new MainItem();
-		itemDial.setTitleId(R.string.title_dial);
-		itemDial.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(mContext, DialActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-			}
-		});
-		list.add(itemDial);
-		
-		MainItem itemBmpM = new MainItem();
-		itemBmpM.setTitleId(R.string.title_bmpmanager);
-		itemBmpM.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(mContext, BitmapManagerTestActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-			}
-		});
-		list.add(itemBmpM);
-		
-		MainItem itemView = new MainItem();
-		itemView.setTitleId(R.string.title_view);
-		itemView.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(mContext, TestViewActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-			}
-		});
-		list.add(itemView);
-		
-		MainItem itemTest = new MainItem();
-		itemTest.setTitleId(R.string.title_test);
-		itemTest.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(mContext, TestActivity.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-			}
-		});
-		list.add(itemTest);
+			list.add(item);
+		}
 		return list;
 	}
 	
@@ -202,6 +121,15 @@ public class MainActivty extends Activity {
 			e.printStackTrace();
 		}
 		return true;
+	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onTouchEvent(android.view.MotionEvent)
+	 */
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		Log.e("TT", event.toString());
+		return super.onTouchEvent(event);
 	}
 
 }

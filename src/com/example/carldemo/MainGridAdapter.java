@@ -50,7 +50,7 @@ public class MainGridAdapter extends BaseAdapter {
 			holder = (ViewHolder) convertView.getTag();
 		}
 		MainItem item = getItem(position);
-		holder.tvTitle.setText(item.getTitleId() <= 0 ? "0" : mContext.getString(item.getTitleId()));
+		holder.tvTitle.setText(item.getTitleStr());
 		
 		return convertView;
 	}

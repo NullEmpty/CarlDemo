@@ -9,6 +9,9 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
         android:allowBackup="true"
@@ -18,7 +21,6 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.carldemo.MainActivty"
-            android:process="com.royole.setting"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
@@ -33,6 +35,11 @@
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/title_audioplayer"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.example.carldemo.audioplayer.AudioDetailActivity"
@@ -45,34 +52,111 @@
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/title_pickerview"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.example.carldemo.circledial.CircleActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/title_circledial"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.example.carldemo.circledial.DialActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
-            android:label="@string/title_circledial"
+            android:label="DialActivity"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
-        
-         <activity
+        <activity
             android:name="com.example.carldemo.bitmapmanager.BitmapManagerTestActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
+            android:label="BitmapManagerTestActivity"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.example.carldemo.view.TestViewActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
+            android:label="TestViewActivity"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.example.carldemo.TestActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
+            android:label="test"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.carldemo.opengl.OpenglTest1"
+            android:configChanges="keyboard|keyboardHidden|orientation|locale"
+            android:label="OpenglTest1"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.carldemo.opengl.OpenGlTest2"
+            android:configChanges="keyboard|keyboardHidden|orientation|locale"
+            android:label="OpenglTest2"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.carldemo.opengl.AirHockeyActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|locale"
+            android:label="AirHockey"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.carldemo.camera.CameraActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|locale"
+            android:label="Camera"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
     </application>
 

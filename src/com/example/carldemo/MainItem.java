@@ -8,20 +8,19 @@ import android.view.View.OnClickListener;
  */
 public class MainItem {
 
-	
-	private int titleId;
-	private OnClickListener mClickListener;
-	public int getTitleId() {
-		return titleId;
+	private String titleStr;
+	private String activityName;
+	public String getTitleStr() {
+		return titleStr;
 	}
-	public void setTitleId(int titleId) {
-		this.titleId = titleId;
+	public void setTitleStr(String titleStr) {
+		this.titleStr = titleStr;
 	}
-	public OnClickListener getClickListener() {
-		return mClickListener;
+	public String getActivityName() {
+		return activityName;
 	}
-	public void setOnClickListener(OnClickListener mClickListener) {
-		this.mClickListener = mClickListener;
+	public void setActivityName(String activityName) {
+		this.activityName = activityName;
 	}
 	
 }
