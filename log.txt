@@ -1,0 +1,23 @@
+commit 7aa185d93a4769a4d9174f864d09df699bb2f196
+Author: NullEmpty <466109067@qq.com>
+Date:   Mon Jan 18 16:33:11 2016 +0800
+
+    ignore
+
+commit b2733b5803c8eed0cc83f3f0351f60f15541ad79
+Author: NullEmpty <466109067@qq.com>
+Date:   Fri Jan 15 17:50:40 2016 +0800
+
+    switch  to gradle
+
+commit f5fcf9ad6aab2a0ad1f1d0d9b2edf2d7fa07c39b
+Author: NullEmpty <466109067@qq.com>
+Date:   Fri Jan 15 16:33:53 2016 +0800
+
+    ignore
+
+commit 3f4f215bee2372ae97d0abec0fd5a1dd3e0382f9
+Author: unknown <pcxu@carl-PC.SZHQ.ROYOLE.COM>
+Date:   Wed Sep 23 16:33:26 2015 +0800
+
+    new upload CarlDemo
