@@ -3,6 +3,7 @@ package com.example.carldemo.opengl;
 import android.app.Activity;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 
 /**
@@ -24,6 +25,7 @@ public class OpenGlTest2 extends Activity {
 		
 		mGlSurfaceView = new GLSurfaceView(getApplicationContext());
 		mTestRender = new TestRender(new Combination(getApplicationContext()));
+		mTestRender.setBgColor(1, 1, 1);
 		mGlSurfaceView.setRenderer(mTestRender);
 		setContentView(mGlSurfaceView);
 	}
@@ -62,6 +64,18 @@ public class OpenGlTest2 extends Activity {
 		});
 		return super.onTouchEvent(event);
 	}
-	
 
+	@Override
+	public boolean onKeyDown(final int keyCode, final KeyEvent event) {
+
+		mGlSurfaceView.queueEvent(new Runnable() {
+			@Override
+			public void run() {
+				if (mTestRender != null) {
+					mTestRender.onKeyDown(keyCode, event);
+				}
+			}
+		});
+		return true;
+	}
 }

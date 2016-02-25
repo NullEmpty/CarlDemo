@@ -10,10 +10,21 @@ android {
         targetSdkVersion 17
     }
 
+    signingConfigs {
+        myConfig {
+            //storeFile file("signer/android.keystore")
+            //storePassword System.console().readLine("\nKeystore password: ")
+            //keyAlias "android"
+            //keyPassword System.console().readLine("\nKey password: ")
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
+            signingConfigs.myConfig
         }
     }
 }

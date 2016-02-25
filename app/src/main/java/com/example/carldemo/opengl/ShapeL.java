@@ -12,6 +12,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.opengl.GLUtils;
+import android.view.KeyEvent;
 
 /**
  * @author: Peichen Xu
@@ -151,6 +152,11 @@ public class ShapeL implements IDrawFrame {
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		return false;
 	}
 
 }

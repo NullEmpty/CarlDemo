@@ -10,6 +10,8 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -20,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 import com.example.carldemo.audioplayer.AudioListActivity;
 import com.example.carldemo.bitmapmanager.BitmapManagerTestActivity;
@@ -37,13 +40,14 @@ public class MainActivty extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_main);
-		
+
 		mContext = this;
 		initView();
-		
+
 		Log.e("TAG", "r:" + getRemindState());
 		setRemindState();
 		Log.e("TAG", "r:" + getRemindState());
+
 	}
 	
 	private void initView(){

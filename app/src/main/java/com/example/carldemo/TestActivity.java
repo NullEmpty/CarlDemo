@@ -23,9 +23,10 @@ public class TestActivity extends Activity {
 		MyThread thread = new MyThread("thread-1");
 		thread.start();
 		mHandler = new Handler(thread.getLooper(), thread);
-		
+
 		Message message = mHandler.obtainMessage(0, Thread.currentThread().getName());
 		mHandler.sendMessage(message);
+
 	}
 	
 	public static class MyThread extends HandlerThread implements Callback {

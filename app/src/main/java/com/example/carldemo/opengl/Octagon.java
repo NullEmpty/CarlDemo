@@ -1,5 +1,7 @@
 package com.example.carldemo.opengl;
 
+import android.view.KeyEvent;
+
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -107,6 +109,11 @@ public class Octagon implements IDrawFrame {
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		return false;
 	}
 
 }

@@ -4,6 +4,9 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 import android.content.Context;
+import android.opengl.GLU;
+import android.opengl.GLUtils;
+import android.view.KeyEvent;
 
 /**
  * @author: Peichen Xu
@@ -14,6 +17,7 @@ public class Combination implements IDrawFrame {
 	private Square mSquare;
 	private Triangle mTriangle;
 	private Octagon mOctagon;
+	private Cylinder mCylinder;
 	
 	private Context mContext;
 	private Cube mCube;
@@ -27,6 +31,8 @@ public class Combination implements IDrawFrame {
 		mOctagon = new Octagon();
 		mCube = new Cube(mContext);
 		mShapeL = new ShapeL(mContext);
+		mCylinder = new Cylinder(8,8,100,500);
+		mCylinder.setzAngle(90);
 	}
 
 	@Override
@@ -54,9 +60,16 @@ public class Combination implements IDrawFrame {
 		gl.glScalef(1.5f, 1.5f, 1.5f);
 		mCube.draw(gl);
 		gl.glPopMatrix();
-		
+
+		gl.glPushMatrix();
 		mShapeL.draw(gl);
-	
+		gl.glPopMatrix();
+
+		gl.glPushMatrix();
+		gl.glTranslatef(0, 0, 6);
+		mCylinder.drawSelf(gl);
+		gl.glPopMatrix();
+
 	}
 
 	/* (non-Javadoc)
@@ -78,6 +91,20 @@ public class Combination implements IDrawFrame {
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		int rr = 0;
+		if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
+			rr = 90;
+		} else if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
+			rr = -90;
+		}
+		if (mCylinder != null) {
+			mCylinder.setyAngle(100);
+		}
+		return true;
 	}
 
 }

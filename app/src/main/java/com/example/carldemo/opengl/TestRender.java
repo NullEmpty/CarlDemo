@@ -5,6 +5,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.opengl.GLSurfaceView.Renderer;
 import android.opengl.GLU;
+import android.view.KeyEvent;
 
 /**
  * @author: Peichen Xu
@@ -26,6 +27,10 @@ public class TestRender implements Renderer {
 		mCr = cr;
 		mCg = cg;
 		mCb = cb;
+	}
+
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		return mDrawFrame != null && mDrawFrame.onKeyDown(keyCode, event);
 	}
 
 	/*
