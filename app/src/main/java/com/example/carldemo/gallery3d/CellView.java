@@ -38,6 +38,8 @@ public class CellView extends RelativeLayout {
 
         mIvIcon = (ImageView) findViewById(R.id.iv_icon);
         mTxvName = (TextView) findViewById(R.id.txv_name);
+
+        setBackgroundResource(R.drawable.item_gallery_selector);
     }
 
     public void setIcon(Bitmap bmp) {

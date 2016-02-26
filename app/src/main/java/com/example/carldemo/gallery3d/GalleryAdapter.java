@@ -13,9 +13,9 @@ import com.example.carldemo.R;
  */
 public class GalleryAdapter extends BaseAdapter {
 
-    private int ITEM_TYPE_1 = 0;
-    private int ITEM_TYPE_2 = 1;
-    private int ITEM_TYPE_3 = 2;
+    public static int ITEM_TYPE_1 = 0;
+    public static int ITEM_TYPE_2 = 1;
+    public static int ITEM_TYPE_3 = 2;
 
     private Context mContext;
     private int[] mResIds = new int[10];
@@ -38,10 +38,10 @@ public class GalleryAdapter extends BaseAdapter {
     public int getItemViewType(int position) {
         if (position == 0) {
             return ITEM_TYPE_1;
-        } else if (position == 1 || position == 2 || position == 3) {
-            return ITEM_TYPE_2;
-        } else {
+        } else if (position >= 4) {
             return ITEM_TYPE_3;
+        } else {
+            return ITEM_TYPE_2;
         }
     }
 
@@ -73,6 +73,7 @@ public class GalleryAdapter extends BaseAdapter {
                 convertView = LayoutInflater.from(mContext).inflate(R.layout.item_gallery3, parent, false);
             }
         }
+
         return convertView;
     }
 }

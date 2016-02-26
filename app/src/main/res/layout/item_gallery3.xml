@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.carldemo.gallery3d.GalleryLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="100dp"
     android:layout_height="150dp"
     android:descendantFocusability="afterDescendants"
@@ -15,6 +15,10 @@
         <com.example.carldemo.gallery3d.CellView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:tag="0"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="blocksDescendants"
             android:layout_weight="1">
 
         </com.example.carldemo.gallery3d.CellView>
@@ -26,6 +30,10 @@
         <com.example.carldemo.gallery3d.CellView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:tag="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="blocksDescendants"
             android:layout_weight="1">
 
         </com.example.carldemo.gallery3d.CellView>
@@ -46,6 +54,10 @@
         <com.example.carldemo.gallery3d.CellView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:tag="2"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="blocksDescendants"
             android:layout_weight="1">
 
         </com.example.carldemo.gallery3d.CellView>
@@ -57,9 +69,13 @@
         <com.example.carldemo.gallery3d.CellView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:tag="3"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="blocksDescendants"
             android:layout_weight="1">
 
         </com.example.carldemo.gallery3d.CellView>
 
     </LinearLayout>
-</LinearLayout>
+</com.example.carldemo.gallery3d.GalleryLinearLayout>
