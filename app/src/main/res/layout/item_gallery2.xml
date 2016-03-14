@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="100dp" android:layout_height="150dp"
-    android:descendantFocusability="afterDescendants"
-    android:orientation="vertical">
 
-   <com.example.carldemo.gallery3d.CellView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:focusable="true"
-       android:focusableInTouchMode="true"
-       android:descendantFocusability="blocksDescendants">
+<com.example.carldemo.gallery3d.MirrorItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="186dp">
 
-   </com.example.carldemo.gallery3d.CellView>
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:descendantFocusability="afterDescendants"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <com.example.carldemo.gallery3d.CellView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+        </com.example.carldemo.gallery3d.CellView>
+
+    </LinearLayout>
+</com.example.carldemo.gallery3d.MirrorItemView>

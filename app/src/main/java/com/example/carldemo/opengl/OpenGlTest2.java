@@ -67,6 +67,10 @@ public class OpenGlTest2 extends Activity {
 
 	@Override
 	public boolean onKeyDown(final int keyCode, final KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			finish();
+			return true;
+		}
 
 		mGlSurfaceView.queueEvent(new Runnable() {
 			@Override

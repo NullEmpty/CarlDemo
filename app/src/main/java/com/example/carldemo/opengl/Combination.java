@@ -31,7 +31,7 @@ public class Combination implements IDrawFrame {
 		mOctagon = new Octagon();
 		mCube = new Cube(mContext);
 		mShapeL = new ShapeL(mContext);
-		mCylinder = new Cylinder(8,8,100,500);
+		mCylinder = new Cylinder(mContext, 8,8,1,180);
 		mCylinder.setzAngle(90);
 	}
 
@@ -67,7 +67,7 @@ public class Combination implements IDrawFrame {
 
 		gl.glPushMatrix();
 		gl.glTranslatef(0, 0, 6);
-		mCylinder.drawSelf(gl);
+		mCylinder.draw(gl);
 		gl.glPopMatrix();
 
 	}
@@ -82,6 +82,8 @@ public class Combination implements IDrawFrame {
 		mTriangle.onSurfaceCreated(gl, config);
 		mCube.onSurfaceCreated(gl, config);
 		mShapeL.onSurfaceCreated(gl, config);
+		mCylinder.onSurfaceCreated(gl, config);
+
 	}
 
 	/* (non-Javadoc)

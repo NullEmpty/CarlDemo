@@ -44,10 +44,6 @@ public class MainActivty extends Activity {
 		mContext = this;
 		initView();
 
-		Log.e("TAG", "r:" + getRemindState());
-		setRemindState();
-		Log.e("TAG", "r:" + getRemindState());
-
 	}
 	
 	private void initView(){
