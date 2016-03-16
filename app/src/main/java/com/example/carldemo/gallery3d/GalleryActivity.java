@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.app.Activity;
 
 import com.example.carldemo.R;
+import com.royole.bwgallery.MyGallery;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GalleryActivity extends Activity {
 
@@ -18,7 +22,7 @@ public class GalleryActivity extends Activity {
         mGallery.setSpacing(80);
         mGallery.setFadingEdgeLength(0);
         GalleryAdapter mAdapter = new GalleryAdapter(this);
-        mAdapter.setData(getRes());
+        mAdapter.setData(getResultInfo());
         mGallery.setAdapter(mAdapter);
 
     }
@@ -27,9 +31,25 @@ public class GalleryActivity extends Activity {
     protected void onResume() {
         super.onResume();
 
-        mGallery.setFocusable(true);
-        mGallery.setFocusableInTouchMode(true);
-        mGallery.requestFocus();
+    }
+
+    private ResultInfo getResultInfo() {
+        ResultInfo resultInfo = new ResultInfo();
+
+        List<AppInfo> appInfoList = new ArrayList<AppInfo>();
+        int[] res = getRes();
+        for (int i : res) {
+            AppInfo appInfo = new AppInfo();
+            appInfo.title = i + "";
+            appInfo.icon = getResources().getDrawable(i);
+            appInfoList.add(appInfo);
+        }
+
+        resultInfo.setApplicationInfoList(appInfoList);
+        resultInfo.setItemInfoList(ResultInfo.makeItemInfoList(appInfoList));
+
+
+        return resultInfo;
     }
 
     private int[] getRes() {

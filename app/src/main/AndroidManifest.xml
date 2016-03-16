@@ -172,24 +172,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".gallery3d.Layout3dActivity"
-            android:label="@string/title_activity_layout3d" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="carl.intent.category.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".gallery3d.BitmapMeshActivity"
-            android:label="BitmapMeshActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="carl.intent.category.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".test.Activity_GL_Cylinder"
             android:label="Activity_GL_Cylinder" >
             <intent-filter>

@@ -1,19 +1,23 @@
 package com.example.carldemo.gallery3d;
 
 import android.content.Context;
-import android.graphics.Rect;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
-import android.widget.LinearLayout;
+
+import com.royole.bwgallery.AbsGalleryLinearLayout;
 
 /**
  * Created by pcxu on 2016/2/26.
  */
-public class GalleryLinearLayout extends LinearLayout {
+public class GalleryLinearLayout extends AbsGalleryLinearLayout {
 
     private static final String TAG = GalleryLinearLayout.class.getSimpleName();
+
+    private CellView mCellView1;
+    private CellView mCellView2;
+    private CellView mCellView3;
+    private CellView mCellView4;
+
     public GalleryLinearLayout(Context context) {
         super(context);
     }
@@ -27,27 +31,43 @@ public class GalleryLinearLayout extends LinearLayout {
     }
 
     @Override
-    protected void onFocusChanged(boolean gainFocus, int direction, Rect previouslyFocusedRect) {
-        Log.e(TAG, "onFocusChanged" + gainFocus + "," + direction + "," + previouslyFocusedRect.toString());
-        super.onFocusChanged(gainFocus, direction, previouslyFocusedRect);
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+
+        mCellView1 = (CellView) findViewWithTag("0");
+        mCellView2 = (CellView) findViewWithTag("1");
+        mCellView3 = (CellView) findViewWithTag("2");
+        mCellView4 = (CellView) findViewWithTag("3");
+
     }
 
-    private String mIndex = "0";
-    public void setIndex(String index) {
-        mIndex = index;
-    }
-
-    @Override
-    protected boolean onRequestFocusInDescendants(int direction, Rect previouslyFocusedRect) {
-        if (direction == View.FOCUS_LEFT) {
-
+    public void setData(AppInfo info) {
+        if (mCellView1 != null) {
+            mCellView1.setAppinfo(info);
         }
-        Log.e(TAG, "onRequestFocusInDescendants " + direction + "," + (previouslyFocusedRect == null ? "null" : previouslyFocusedRect.toString()));
-        findViewWithTag(mIndex).requestFocus(direction, previouslyFocusedRect);
+    }
 
-        mIndex = "0";
-        return true;
-//        return super.onRequestFocusInDescendants(direction, previouslyFocusedRect);
+    public void setData(AppInfo info, AppInfo info2) {
+        setData(info);
+        if (mCellView2 != null) {
+            mCellView2.setAppinfo(info2);
+        }
+    }
+
+    public void setData(AppInfo info, AppInfo info2, AppInfo info3) {
+        setData(info, info2);
+        if (mCellView3 != null) {
+            mCellView3.setAppinfo(info3);
+        }
 
     }
+
+    public void setData(AppInfo info, AppInfo info2, AppInfo info3, AppInfo info4) {
+        setData(info, info2, info3);
+        if (mCellView4 != null) {
+            mCellView4.setAppinfo(info4);
+        }
+
+    }
+
 }

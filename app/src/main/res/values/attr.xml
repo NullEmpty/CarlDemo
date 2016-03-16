@@ -19,4 +19,13 @@
         <attr name="textSize"/>
     </declare-styleable>
 
+    <declare-styleable name="CellView">
+        <attr name="item_type">
+            <enum name="type_1" value="1"/>
+            <enum name="type_2" value="2"/>
+            <enum name="type_3" value="3"/>
+        </attr>
+    </declare-styleable>
+
+
 </resources>
