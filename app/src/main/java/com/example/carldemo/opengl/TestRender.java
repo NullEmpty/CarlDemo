@@ -49,7 +49,7 @@ public class TestRender implements Renderer {
 		gl.glEnable(GL10.GL_DEPTH_TEST);
 		gl.glDepthFunc(GL10.GL_LEQUAL);
 		gl.glHint(GL10.GL_PERSPECTIVE_CORRECTION_HINT, GL10.GL_NICEST);
-		
+
 		if (mDrawFrame != null) {
 			mDrawFrame.onSurfaceCreated(gl, config);
 		}

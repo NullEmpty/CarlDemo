@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CellView">
+        <attr name="item_type">
+            <enum name="type_1" value="0"/>
+            <enum name="type_2" value="1"/>
+            <enum name="type_3" value="2"/>
+        </attr>
+    </declare-styleable>
+
+
+</resources>

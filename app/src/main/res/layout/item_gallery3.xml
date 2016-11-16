@@ -1,81 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.carldemo.gallery3d.GalleryLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="100dp"
-    android:layout_height="150dp"
-    android:descendantFocusability="afterDescendants"
-    android:orientation="vertical">
+<com.royole.bwgallery.MirrorItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:royole="http://schemas.android.com/apk/res-auto"
+    android:layout_width="237dp"
+    android:layout_height="271dp"
+    android:descendantFocusability="afterDescendants">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+    <com.example.carldemo.gallery3d.GalleryLinearLayout
+        android:layout_width="237dp"
+        android:layout_height="237dp"
         android:descendantFocusability="afterDescendants"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <com.example.carldemo.gallery3d.CellView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:tag="0"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:descendantFocusability="blocksDescendants"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:descendantFocusability="afterDescendants"
+            android:orientation="horizontal">
 
-        </com.example.carldemo.gallery3d.CellView>
+            <com.example.carldemo.gallery3d.CellView
+                royole:item_type="type_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:tag="0">
+
+            </com.example.carldemo.gallery3d.CellView>
+
+            <TextView
+                android:layout_width="6dp"
+                android:layout_height="6dp" />
+
+            <com.example.carldemo.gallery3d.CellView
+                royole:item_type="type_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:tag="1">
+
+            </com.example.carldemo.gallery3d.CellView>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="5dp"
             android:layout_height="5dp" />
 
-        <com.example.carldemo.gallery3d.CellView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:tag="1"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:descendantFocusability="blocksDescendants"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:descendantFocusability="afterDescendants"
+            android:orientation="horizontal">
 
-        </com.example.carldemo.gallery3d.CellView>
+            <com.example.carldemo.gallery3d.CellView
+                royole:item_type="type_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:tag="2">
 
-    </LinearLayout>
+            </com.example.carldemo.gallery3d.CellView>
 
-    <TextView
-        android:layout_width="5dp"
-        android:layout_height="5dp" />
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="5dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:descendantFocusability="afterDescendants"
-        android:orientation="horizontal">
+            <com.example.carldemo.gallery3d.CellView
+                royole:item_type="type_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:tag="3">
 
-        <com.example.carldemo.gallery3d.CellView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:tag="2"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:descendantFocusability="blocksDescendants"
-            android:layout_weight="1">
+            </com.example.carldemo.gallery3d.CellView>
 
-        </com.example.carldemo.gallery3d.CellView>
-
-        <TextView
-            android:layout_width="5dp"
-            android:layout_height="5dp" />
-
-        <com.example.carldemo.gallery3d.CellView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:tag="3"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:descendantFocusability="blocksDescendants"
-            android:layout_weight="1">
-
-        </com.example.carldemo.gallery3d.CellView>
-
-    </LinearLayout>
-</com.example.carldemo.gallery3d.GalleryLinearLayout>
+        </LinearLayout>
+    </com.example.carldemo.gallery3d.GalleryLinearLayout>
+</com.royole.bwgallery.MirrorItemView>
