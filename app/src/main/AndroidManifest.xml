@@ -2,11 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.carldemo"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="12"
         android:targetSdkVersion="17" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -21,12 +23,12 @@
         android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivty"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +39,7 @@
             android:name=".audioplayer.AudioListActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/title_audioplayer"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,13 +50,12 @@
             android:name=".audioplayer.AudioDetailActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/title_audioplayer"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".pickerview.PickerViewActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/title_pickerview"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -65,7 +66,7 @@
             android:name=".circledial.CircleActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/title_circledial"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -76,7 +77,7 @@
             android:name=".circledial.DialActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="DialActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -87,7 +88,7 @@
             android:name=".bitmapmanager.BitmapManagerTestActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="BitmapManagerTestActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -98,7 +99,7 @@
             android:name=".view.TestViewActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="TestViewActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -109,18 +110,25 @@
             android:name=".TestActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="test"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="carl.intent.category.SAMPLE_CODE" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
         </activity>
         <activity
             android:name=".opengl.OpenglTest1"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="OpenglTest1"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -131,7 +139,7 @@
             android:name=".opengl.OpenGlTest2"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="OpenglTest2"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -142,7 +150,7 @@
             android:name=".opengl.AirHockeyActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="AirHockey"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -154,7 +162,7 @@
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="Camera"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -164,7 +172,7 @@
         <activity
             android:name=".gallery3d.GalleryActivity"
             android:label="@string/title_activity_gallery"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -173,7 +181,7 @@
         </activity>
         <activity
             android:name=".gallery3d.Layout3dActivity"
-            android:label="@string/title_activity_layout3d" >
+            android:label="@string/title_activity_layout3d">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -182,7 +190,16 @@
         </activity>
         <activity
             android:name=".gallery3d.BitmapMeshActivity"
-            android:label="BitmapMeshActivity" >
+            android:label="BitmapMeshActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.BitmapBlurActivity"
+            android:label="@string/title_activity_bitmap_blur">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
