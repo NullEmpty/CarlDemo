@@ -5,7 +5,7 @@
     android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="12"
+        android:minSdkVersion="16"
         android:targetSdkVersion="17" />
 
     <uses-feature android:name="android.hardware.usb.host" />
@@ -50,7 +50,7 @@
             android:name=".audioplayer.AudioDetailActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
             android:label="@string/title_audioplayer"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".pickerview.PickerViewActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|locale"
@@ -200,6 +200,15 @@
         <activity
             android:name=".view.BitmapBlurActivity"
             android:label="@string/title_activity_bitmap_blur">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="carl.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mdns.MDNSActivity"
+            android:label="@string/title_activity_mdns">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
