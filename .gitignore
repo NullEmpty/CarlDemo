@@ -2,3 +2,7 @@
 /build
 /.gradle
 /.idea
+/*.iml
+/app/app.iml
+/local.properties
+/bwgallerylibrary/bwgallerylibrary.iml

@@ -29,7 +29,7 @@ public class AudioUtil {
 		String sortOrder = MediaStore.Audio.Media.DATE_MODIFIED + " desc ";
 		Cursor cursor = resolver.query(uri, projection, selection,
 				selectionArgs, sortOrder);
-		if (cursor == null) {
+		if (cursor == null || cursor.getCount() == 0) {
 			return null;
 		}
 

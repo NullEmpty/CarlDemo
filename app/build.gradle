@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 17
+    compileSdkVersion 21
     buildToolsVersion "23.0.1"
 
     defaultConfig {
         applicationId "com.example.carldemo"
         minSdkVersion 16
-        targetSdkVersion 17
+        targetSdkVersion 21
     }
 
     signingConfigs {
@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:18.0.0'
     compile 'com.google.code.gson:gson:2.3.1'
     compile project(path: ':bwgallerylibrary')
+    compile 'com.android.support:support-v4:25.2.0'
 }
