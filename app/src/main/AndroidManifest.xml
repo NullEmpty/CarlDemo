@@ -197,6 +197,13 @@
                 <category android:name="carl.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity android:name=".draw.DrawActivity"
+            android:label="Draw">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="carl.intent.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
