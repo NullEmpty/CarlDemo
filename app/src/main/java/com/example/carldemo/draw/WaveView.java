@@ -6,9 +6,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
-import android.graphics.PointF;
-import android.graphics.Rect;
 import android.graphics.RectF;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -27,10 +27,20 @@ public class WaveView extends View {
     private Point mPointE;
     private Point mPointA;
 
+    private int mCenter = 1100;
+    private int[] mFlag = new int[]{2,-3,1,-2,-2, 3, 1};
     private List<Point> mPoints = new ArrayList<>();
     private List<Point> mPointMids = new ArrayList<>();
     private List<Point> mPointMidMids = new ArrayList<>();
     private List<Point> mPointControls = new ArrayList<>();
+
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            refresh();
+            sendEmptyMessageDelayed(0, 80);
+        }
+    };
     public WaveView(Context context) {
         super(context);
         init(context);
@@ -64,18 +74,52 @@ public class WaveView extends View {
         initControlPoints(mPoints, mPointMids, mPointMidMids);
     }
 
+    public void start() {
+        mHandler.removeMessages(0);
+        mHandler.sendEmptyMessageDelayed(0, 80);
+    }
+
+    public void stop() {
+        mHandler.removeMessages(0);
+    }
+
+    public void refresh() {
+        for (int j = 0; j < mPoints.size(); j ++) {
+            Point point = mPoints.get(j);
+            point.y  = point.y - 20* mFlag[j];
+            if (Math.abs(point.y - mCenter) > 150) {
+                mFlag[j] *= -1;
+            }
+        }
+        initMidPoints(mPoints);
+        initMidMidPoints(mPointMids);
+        initControlPoints(mPoints, mPointMids, mPointMidMids);
+        postInvalidate();
+    }
+
+    public void progress(int i) {
+        for (Point p : mPoints) {
+            p.y += i;
+        }
+        mCenter += i;
+    }
+
     private void initPoints() {
-        mPoints.add(new Point(50, 1300));
-        mPoints.add(new Point(250, 1000));
-        mPoints.add(new Point(550, 1200));
-        mPoints.add(new Point(850, 950));
-        mPoints.add(new Point(1000, 1250));
+        mPoints.add(new Point(0, 1200));
+        mPoints.add(new Point(150, 1200));
+        mPoints.add(new Point(300, 1000));
+        mPoints.add(new Point(550, 1150));
+        mPoints.add(new Point(750, 1100));
+        mPoints.add(new Point(900, 1250));
+        mPoints.add(new Point(1080, 1200));
+
     }
 
     private void initMidPoints(List<Point> points) {
         if (points == null || points.isEmpty()) {
             return;
         }
+        mPointMids.clear();
         Point midPoint;
         for (int i = 0; i < points.size() - 1; i ++) {
             midPoint = new Point((int)(points.get(i).x + points.get(i + 1).x)/2, (int)(points.get(i).y + points.get(i + 1).y)/2 );
@@ -87,6 +131,7 @@ public class WaveView extends View {
         if (midPoints == null || midPoints.isEmpty()) {
             return;
         }
+        mPointMidMids.clear();
         Point midMidPoint;
         for (int i = 0; i < midPoints.size() - 1; i ++) {
             midMidPoint = new Point((int)(midPoints.get(i).x + midPoints.get(i + 1).x)/2, (int)(midPoints.get(i).y + midPoints.get(i + 1).y)/2 );
@@ -95,6 +140,7 @@ public class WaveView extends View {
     }
 
     private void initControlPoints(List<Point> points, List<Point> midPoints, List<Point> midmidPoints) {
+        mPointControls.clear();
         for (int i = 1; i < points.size() - 1; i ++) {
             Point beforePoint = new Point();
             Point afterPoint = new Point();
@@ -168,6 +214,8 @@ public class WaveView extends View {
                 path.quadTo(mPointControls.get(mPointControls.size() - 1).x, mPointControls.get(mPointControls.size() - 1).y, mPoints.get(i + 1).x, mPoints.get(i+1).y);
             }
         }
+        path.lineTo(1080, 1920);
+        path.lineTo(0, 1920);
         path.lineTo(mPoints.get(0).x, mPoints.get(0).y);
         mPaint.setStyle(Paint.Style.FILL);
         canvas.drawPath(path, mPaint);

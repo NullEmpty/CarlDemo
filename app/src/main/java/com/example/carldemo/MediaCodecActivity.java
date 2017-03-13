@@ -36,11 +36,11 @@ public class MediaCodecActivity extends Activity {
             @Override
             public void run() {
                 final long start = System.currentTimeMillis();
-                decode("/sdcard/tieba/¸£¶ûÄ¦Ë¹ÏÈÉú.mp4");
+                decode("/sdcard/tieba/ç¦å°”æ‘©æ–¯å…ˆç”Ÿ.mp4");
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(TestActivity.this, "take:" + (System.currentTimeMillis() - start) / 1000f, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MediaCodecActivity.this, "take:" + (System.currentTimeMillis() - start) / 1000f, Toast.LENGTH_SHORT).show();
                     }
                 });
             }
