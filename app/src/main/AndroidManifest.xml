@@ -204,6 +204,13 @@
                 <category android:name="carl.intent.category.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
+        <activity android:name=".MediaCodecActivity"
+            android:label="MediaCodec">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="carl.intent.category.SAMPLE_CODE"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
