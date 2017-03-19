@@ -156,16 +156,6 @@ public class WaveView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Path path = new Path();
-        RectF rect = new RectF(100, 100, 1000, 200);
-        path.addRect(rect, Path.Direction.CW);
-        mPaint.setStyle(Paint.Style.STROKE);
-        canvas.drawPath(path, mPaint);
-
-        path.reset();
-        path.moveTo(mPointS.x, mPointS.y);
-        path.quadTo(mPointA.x, mPointA.y, mPointE.x, mPointE.y);
-        canvas.drawPath(path, mPaint);
 
         drawWave(canvas);
     }

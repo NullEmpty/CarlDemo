@@ -16,18 +16,18 @@ public class DrawActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_draw);
-        mWaveView = new WaveView(this);
-        setContentView(mWaveView);
+        setContentView(R.layout.activity_draw);
 
+        mWaveView = (WaveView) findViewById(R.id.wave_view);
         mWaveView.setOnTouchListener(mTouchListener);
         mWaveView.start();
+
+
     }
 
     private View.OnTouchListener mTouchListener = new View.OnTouchListener() {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
-            float x=event.getX();
             float y = event.getY();
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
                 if (mWaveView != null) {
