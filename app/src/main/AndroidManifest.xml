@@ -4,10 +4,6 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-    <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="17" />
-
     <uses-feature android:name="android.hardware.usb.host" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -211,6 +207,12 @@
                 <category android:name="carl.intent.category.SAMPLE_CODE"/>
             </intent-filter>
         </activity>
+
+        <receiver android:name=".StaticReceiver">
+            <intent-filter>
+                <action android:name="com.carl.static"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
